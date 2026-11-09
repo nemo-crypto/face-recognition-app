@@ -1,0 +1,12 @@
+node_modules/
+web/dist/
+data/
+playwright-report/
+test-results/
+*.log
+.DS_Store
+.idea/
+.env
+.env.*
+!.env.example
+/server

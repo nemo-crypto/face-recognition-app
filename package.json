@@ -1,0 +1,38 @@
+{
+  "name": "face-studio-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite --config web/vite.config.ts",
+    "typecheck": "tsc -p web/tsconfig.json --noEmit",
+    "build": "npm run typecheck && vite build --config web/vite.config.ts",
+    "test:e2e": "npm run build && playwright test",
+    "check": "npm run build && go test -race ./... && go vet ./..."
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vite": "^6.4.1",
+    "@playwright/test": "1.58.2",
+    "@types/node": "^24.0.0"
+  },
+  "description": "TypeScript + Go face verification workflow demo with camera capture, photo upload and a model-provider API. 人脸核验全栈教学，默认模拟流程，不含识别模型。",
+  "keywords": [
+    "face-recognition",
+    "face-verification",
+    "golang",
+    "typescript",
+    "camera",
+    "image-upload",
+    "rest-api",
+    "full-stack",
+    "demo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nemo-crypto/face-recognition-app.git"
+  }
+}
